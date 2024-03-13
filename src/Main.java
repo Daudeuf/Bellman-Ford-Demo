@@ -147,7 +147,7 @@ class Graph {
 		StringBuilder str = new StringBuilder("Distance du sommet à la source :\n\tSommet\t\tCoût\n");
 
 		for (int i = 0; i < V; ++i) {
-			str.append(String.format("\t%s\t\t\t%d\n", (char) ('A' + i), dist[i]));
+			str.append(String.format("\t%s\t\t\t%s\n", (char) ('A' + i), dist[i] == Integer.MAX_VALUE ? "∞" : dist[i]));
 		}
 
 		return str.toString();
